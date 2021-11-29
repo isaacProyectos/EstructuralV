@@ -1,13 +1,59 @@
+<body  style= "background-color:rgba(202, 120, 191, 0.842)">
+    <ul>
+       <li class="horizontal"><a href="{% url 'homes' %}" class="button">Home</a> </li>
+       <li class="horizontal"><a href="{% url 'sintactico:patrones' %}"class="button">Ayuda y Capacitación</a></li>
+       <li class="horizontal"><a href="{% url 'about:about' %}"class="button">Conocenos</a></li>
+       <li class="horizontal"><a href="{% url 'grafo' %}"class="button">Grafo</a></li>
+   
+    </ul>
+ <div>
+    <img>
+<div>
+<h4 align=center><b> Signos y síntomas  </b></h4>
+<p>El síntoma más común del cáncer de seno es la presencia de un nódulo o masa que antes no estaba, pero también es posible que se generen otros síntomas. Es importante que cualquier cambio que note en sus senos sea revisado por su médico.</p>
+</div>
+</div>
+<div>
+    <p>Varios aspectos pueden afectar la capacidad de la mamografía para detectar (encontrar) el cáncer de mama:</p>
+    <ul>
+      <li>  Edad y peso del paciente.</li>
+      <li>  Tamaño y tipo del tumor.</li>
+      <li>  Si el tumor se ha formado en la mama.</li>
+      <li>  Sensibilidad del tejido de la mama a las hormonas.</li>
+      <li>  Densidad del tejido de la mama.</li>
+      <li>  Momento en que se hace la mamografía dentro del ciclo menstrual de la mujer.</li>
+      <li>  Calidad de la imagen de la mamografía.</li>
+      <li>  Habilidad del radiólogo para interpretar la imagen.</li>
 
-{% extends 'homes/homes.html' %}
-
-{% block blockname %}
-  <h1>
-        Reconocimento de Patrones Sintactico Estructural
-    </h1>
-{% endblock blockname %}
-{% block footers %}
-    <p>sintactico</p>>
-{% endblock footers %}
+        <p> Las imágenes por resonancia magnética se utilizan para examinar a mujeres con riesgo alto de cáncer de mama.</p>
+           <p>Las mujeres de 50 a 69 años que se someten a mamografías de detección tienen menos probabilidades de morir por este cáncer que quienes no lo hacen.
+            </p>
+    </ul>
+    <img src="https://picsum.photos/seed/picsum/200/300" alt="My image">
     
+</div>
+
+<style>
+
+    .button {
+      background-color: #701e51;
+      border: 5px;;
+      color: white;
+      padding: 5px 5px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 20px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+
+    .horizontal{
+        display: block;
+        float: left;
+        padding: 2px;
+        
+    }
+  </style>
+
     

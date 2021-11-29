@@ -11,8 +11,8 @@
 <body  style= "background-color:rgba(202, 120, 191, 0.842)">
     <ul>
        <li class="horizontal"><a href="{% url 'homes' %}" class="button">Home</a> </li>
-       <li class="horizontal"><a href="{% url 'sintactico:patrones' %}"class="button">Sintactico</a></li>
-       <li class="horizontal"><a href="{% url 'about:about' %}"class="button">About</a></li>
+       <li class="horizontal"><a href="{% url 'sintactico:patrones' %}"class="button">Ayuda y Capacitación</a></li>
+       <li class="horizontal"><a href="{% url 'about:about' %}"class="button">Conocenos</a></li>
        <li class="horizontal"><a href="{% url 'grafo' %}"class="button">Grafo</a></li>
     </ul>
    
@@ -25,7 +25,7 @@
             {% for umb in umbrales%}
             <tr>
                 {% for u in umb  %}
-                <td style="border:2px solid #1e5170;">{{u}}</td>
+                <td style="border:2px solid #701e55;">{{u}}</td>
                 {% endfor %}
                 
             </tr>
@@ -50,7 +50,7 @@
 </body>
 <style>
     .button {
-      background-color: #1e5170;
+      background-color: #701e51;
       border: 5px;;
       color: white;
       padding: 5px 5px;

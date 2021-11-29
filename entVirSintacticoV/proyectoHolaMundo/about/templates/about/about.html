@@ -1,9 +1,45 @@
-{% extends 'homes/homes.html' %}
-{% block blockname %}
-    <h1>Bienvenido acerca de mi <h1><body>
-        <h2>el nombre de usuario es: {{nombreusuario}} </h2>
-        <h2>mi edad es: {{edad}} </h2>
+<body  style= "background-color:rgba(202, 120, 191, 0.842)">
+    <ul>
+       <li class="horizontal"><a href="{% url 'homes' %}" class="button">Home</a> </li>
+       <li class="horizontal"><a href="{% url 'sintactico:patrones' %}"class="button">Ayuda y Capacitación</a></li>
+       <li class="horizontal"><a href="{% url 'about:about' %}"class="button">Conocenos</a></li>
+       <li class="horizontal"><a href="{% url 'grafo' %}"class="button">Grafo</a></li>
    
-{% endblock blockname %}
-{% block footers %}
-{% endblock footers  %}
+    </ul>
+<div>
+    <h4 align=center><b> CONOCENOS </b></h4>
+    <p align=center>El objetivo del cribado es identificar a las personas que podrían tener una enfermedad, mediante la realización de pruebas para detectar signos de enfermedad y poder tratar con mayor rapidez y eficacia el problema.</p>
+    <div>
+        <p>Hay muchos tipos de pruebas las cuales te puedes realizar. Como por ejemplo:</p>
+
+        <ul>
+          <li> <b> Ultrasonido mamario:</b></li> <p> Máquina que usa ondas de sonido para producir imágenes, llamadas sonogramas, de áreas dentro de la mama.</p>
+          <li> <b> Mamografía de diagnóstico:</b></li> <p> Si usted tiene algún problema en la mama —como un bulto— o si un área de la mama se ve anormal en una mamografía de detección, el médico puede indicarle que se haga una mamografía diagnóstica. Esta es una radiografía más detallada de la mama.</p>
+          <li> <b> Imagen por resonancia magnética (IRM) de las mamas.:</b></li><p> Un tipo de escaneo del cuerpo que usa un imán conectado a una computadora. La resonancia magnética  creará imágenes detalladas de áreas dentro de la mama.</p>
+            <li> <b> Biopsia:</b></li> <p> . Esta es una prueba en la que se extirpa tejido o se saca líquido de la mama para estudiarse bajo el microscopio o para hacer más pruebas. Existen distintos tipos de biopsias (por ejemplo, aspiración con aguja fina, biopsia con aguja gruesa o biopsia abierta).</p>
+        </p>
+           
+        </ul>
+    </div>
+    <style>
+
+        .button {
+          background-color: #701e51;
+          border: 5px;;
+          color: white;
+          padding: 5px 5px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 20px;
+          margin: 4px 2px;
+          cursor: pointer;
+        }
+    
+        .horizontal{
+            display: block;
+            float: left;
+            padding: 2px;
+            
+        }
+      </style>

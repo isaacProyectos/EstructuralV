@@ -11,70 +11,52 @@
 <body  style= "background-color:rgba(202, 120, 191, 0.842)">
     <ul>
        <li class="horizontal"><a href="{% url 'homes' %}" class="button">Home</a> </li>
-       <li class="horizontal"><a href="{% url 'sintactico:patrones' %}"class="button">Sintactico</a></li>
-       <li class="horizontal"><a href="{% url 'about:about' %}"class="button">About</a></li>
+       <li class="horizontal"><a href="{% url 'sintactico:patrones' %}"class="button">Ayuda y Capacitación</a></li>
+       <li class="horizontal"><a href="{% url 'about:about' %}"class="button">Conocenos</a></li>
        <li class="horizontal"><a href="{% url 'grafo' %}"class="button">Grafo</a></li>
    
     </ul>
     
-        {%csrf_token%}
-        <label for="umbral">UMBRAL</label>
-        <input type="text" name="" id="umbral">
-    <button type="submit" name="miboton" class="button">Iniciar Procesamiento</button>
-
+       
     </form>
-    <img src="revision.jpg">
+   
     <div class="wave" style="height: 150px;overflow: hidden;"><svq viewBox="0 0 500 150"preserveAspectRatio="none"
         style="height: 100%;width:100%;"><path d="M0.00,49.98C150.00,150.00 349.20,-50.00 500.00, 49.98 L500.00,
         150.00 L0.00,150.00 Z"style="stroke:none;fill:#f0f;"></path></svq></div>
+    
+
+    <div align=right>
+    
+        Información general sobre el Cáncer de Mama
+        <ul>
+            <li>El cáncer de mama es una enfermedad por la que se forman células malignas (cancerosas) en los tejidos de la mama.</li>
+            <li>El cáncer de mama es la segunda causa principal de muerte por cáncer en las mujeres en los Estados Unidos.</li>
+            <li>Varios factores aumentan o disminuyen el riesgo de cáncer de mama.</li>
+        </ul>
+    </div>
+    <div>
+        <p>
+             Los científicos tratan de entender mejor quiénes tienen más probabilidades de enfermar de ciertos tipos de cáncer. Por ejemplo, analizan la edad de la persona, sus antecedentes familiares y ciertas exposiciones a lo largo de su vida. Esta información ayuda a los médicos
+             a recomendar quién se debe someter a los exámenes de detección del cáncer, qué pruebas se deben utilizar y con qué frecuencia se deben realizar.    
+        </p></div>
        
-
-    {% block blockname1 %}
+    <div align=center>
+        ¿Qué son los exámenes de detección?</div>
+    <div align=right>
+        <p >
+            Los exámenes de detección verifican la presencia de signos de enfermedad, <br>
+            como el cáncer de mama, antes de que la persona tenga síntomas. El propósito<br>
+            de los exámenes de detección es encontrar el cáncer en un estadio más temprano<br>
+            Los exámenes de detección verifican la presencia de signos de enfermedad,<br>
+            cuando se puede tratar y quizá se cure. A veces, durante los exámenes de <br>
+            detección se encuentra cáncer que es muy pequeño o de crecimiento muy lento.<br>
+        </p></div>
     
-    {% endblock blockname1 %}
-
-{%for l in mislistas%}
-<ul>
-    
-    <table class="horizontal">
-        <thead>
-            <tr>
-                <td>pk</td>
-                <td>Temp</td>
-                <td>Color</td>
-                <td>Inflamacion</td>
-
-            </tr>
-        </thead>
-        <tbody>
-            {% for elemento in l%}
-            <tr>
-
-                <td style="border:2px solid #701e55;" ><a href="">
-                    {{elemento.pk}} 
-                </a></td>
-                <td style="border:2px solid #701e51;">{{elemento.temperature}}</td>
-                <td style="border:2px solid #701e51;">{{elemento.color}}</td>
-                <td style="border:2px solid #701e51;">{{elemento.inflamation}}</td>
-            </tr>
-            {% endfor %} 
-
-        </tbody>
-    </table>
-    
-</ul>
-{%endfor%}
-<!--separar-->
-
-    {% block blockname %}
-  
-{% endblock blockname %}
-{{lista}}
-<hr>{% block footers %}
+    <img src="https://picsum.photos/id/237/200/300" alt="My image">
    
-{% endblock footers %}
-
-</body>
+    
+    </body>
+   
 <style>
     .button {
       background-color: #701e51;

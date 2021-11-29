@@ -11,10 +11,9 @@
 <body  style= "background-color:rgba(202, 120, 191, 0.842)">
     <ul>
        <li class="horizontal"><a href="{% url 'homes' %}" class="button">Home</a> </li>
-       <li class="horizontal"><a href="{% url 'sintactico:patrones' %}"class="button">Sintactico</a></li>
-       <li class="horizontal"><a href="{% url 'about:about' %}"class="button">About</a></li>
+       <li class="horizontal"><a href="{% url 'sintactico:patrones' %}"class="button">Ayuda y Capacitación</a></li>
+       <li class="horizontal"><a href="{% url 'about:about' %}"class="button">Conocenos</a></li>
        <li class="horizontal"><a href="{% url 'grafo' %}"class="button">Grafo</a></li>
-    </ul>
     <form action="{%url 'umbral'%}" method="POST">
         {%csrf_token%}
         <label for="umbral">UMBRAL</label>
