@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISI pagina principal</title>
+
+    
+</head>
+<body  style= "background-color:rgba(202, 120, 191, 0.842)">
+    <ul>
+       <li class="horizontal"><a href="{% url 'homes' %}" class="button">Home</a> </li>
+       <li class="horizontal"><a href="{% url 'sintactico:patrones' %}"class="button">Sintactico</a></li>
+       <li class="horizontal"><a href="{% url 'about:about' %}"class="button">About</a></li>
+       <li class="horizontal"><a href="{% url 'grafo' %}"class="button">Grafo</a></li>
+    </ul>
+   
+    {% block blockname1 %}
+    
+    {% endblock blockname1 %}
+
+    <table class="horizontal">
+        <tbody>
+            {% for umb in umbrales%}
+            <tr>
+                {% for u in umb  %}
+                <td style="border:2px solid #1e5170;">{{u}}</td>
+                {% endfor %}
+                
+            </tr>
+            {% endfor %} 
+
+        </tbody>
+    </table>
+
+
+<!--separar-->
+
+    {% block blockname %}
+  
+{% endblock blockname %}
+
+
+
+{% block footers %}
+   
+{% endblock footers %}
+
+</body>
+<style>
+    .button {
+      background-color: #1e5170;
+      border: 5px;;
+      color: white;
+      padding: 5px 5px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 20px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+
+    .horizontal{
+        display: block;
+        float: left;
+        padding: 2px;
+        
+    }
+  </style>
+
+</html>

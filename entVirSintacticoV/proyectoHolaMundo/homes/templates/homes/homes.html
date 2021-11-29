@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISI pagina principal</title>
+
+    
+</head>
+<body  style= "background-color:rgba(202, 120, 191, 0.842)">
+    <ul>
+       <li class="horizontal"><a href="{% url 'homes' %}" class="button">Home</a> </li>
+       <li class="horizontal"><a href="{% url 'sintactico:patrones' %}"class="button">Sintactico</a></li>
+       <li class="horizontal"><a href="{% url 'about:about' %}"class="button">About</a></li>
+       <li class="horizontal"><a href="{% url 'grafo' %}"class="button">Grafo</a></li>
+   
+    </ul>
+    
+        {%csrf_token%}
+        <label for="umbral">UMBRAL</label>
+        <input type="text" name="" id="umbral">
+    <button type="submit" name="miboton" class="button">Iniciar Procesamiento</button>
+
+    </form>
+    <img src="revision.jpg">
+    <div class="wave" style="height: 150px;overflow: hidden;"><svq viewBox="0 0 500 150"preserveAspectRatio="none"
+        style="height: 100%;width:100%;"><path d="M0.00,49.98C150.00,150.00 349.20,-50.00 500.00, 49.98 L500.00,
+        150.00 L0.00,150.00 Z"style="stroke:none;fill:#f0f;"></path></svq></div>
+       
+
+    {% block blockname1 %}
+    
+    {% endblock blockname1 %}
+
+{%for l in mislistas%}
+<ul>
+    
+    <table class="horizontal">
+        <thead>
+            <tr>
+                <td>pk</td>
+                <td>Temp</td>
+                <td>Color</td>
+                <td>Inflamacion</td>
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for elemento in l%}
+            <tr>
+
+                <td style="border:2px solid #701e55;" ><a href="">
+                    {{elemento.pk}} 
+                </a></td>
+                <td style="border:2px solid #701e51;">{{elemento.temperature}}</td>
+                <td style="border:2px solid #701e51;">{{elemento.color}}</td>
+                <td style="border:2px solid #701e51;">{{elemento.inflamation}}</td>
+            </tr>
+            {% endfor %} 
+
+        </tbody>
+    </table>
+    
+</ul>
+{%endfor%}
+<!--separar-->
+
+    {% block blockname %}
+  
+{% endblock blockname %}
+{{lista}}
+<hr>{% block footers %}
+   
+{% endblock footers %}
+
+</body>
+<style>
+    .button {
+      background-color: #701e51;
+      border: 5px;;
+      color: white;
+      padding: 5px 5px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 20px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+
+    .horizontal{
+        display: block;
+        float: left;
+        padding: 2px;
+        
+    }
+  </style>
+
+</html>
